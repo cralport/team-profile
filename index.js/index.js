@@ -30,11 +30,6 @@ function addManager() {
             name: "name"
         },
         {
-            type: "Number",
-            message: "What is your manager's employee ID?",
-            name: "Id Number",  
-        },
-        {
             message: "What is your team manager's email address?",
             name: "email"
         },
@@ -46,7 +41,7 @@ function addManager() {
     ])
         .then(function (data) {
             const name = data.name
-            const id = 1
+            const id = teamArr.length
             const email = data.email
             const officeNumber = data.officeNumber
             const teamMember = new Manager(name, id, email, officeNumber)
@@ -85,11 +80,6 @@ function addEngineer() {
             name: "name"
         },
         {
-            type: "Number",
-            message: "What is your engineer's employee ID?",
-            name: "Id Number",  
-        },
-        {
             message: "What is this engineer's email address?",
             name: "email"
         },
@@ -101,7 +91,7 @@ function addEngineer() {
 
         .then(function (data) {
             const name = data.name
-            const id = teamArr.length + 1
+            const id = teamArr.length +1
             const email = data.email
             const github = data.github
             const teamMember = new Engineer(name, id, email, github)
@@ -118,11 +108,6 @@ function addIntern() {
             name: "name"
         },
         {
-            type: "Number",
-            message: "What is your Intern's employee ID?",
-            name: "Id Number",  
-        },
-        {
             message: "What is this intern's email address?",
             name: "email"
         },
@@ -134,7 +119,7 @@ function addIntern() {
 
         .then(function (data) {
             const name = data.name
-            const id = teamArr.length + 1
+            const id = teamArr.length +1 
             const email = data.email
             const school = data.school
             const teamMember = new Intern(name, id, email, school)
@@ -208,7 +193,7 @@ function compileTeam() {
     `
     htmlArray.push(htmlEnd);
 
-    fs.writeFile(`./generated-html/${teamArr[0]}.html`, htmlArray.join(""), function (err) {
+    fs.writeFile(`../generated-html/${teamArr[0]}.html`, htmlArray.join(""), function (err) {
 
     })
 }
