@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/cralport/team-profile#readme",
   "dependencies": {
+    "inquirer": "^8.0.0",
+    "jest": "^26.6.3",
     "requirer": "0.0.4"
   }
 }
